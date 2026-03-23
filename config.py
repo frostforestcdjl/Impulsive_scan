@@ -10,4 +10,4 @@ station = 'ACR'
 confidence_threshold = 0.9
 
 # --- waveform parameters ---
-window_length = 5  # seconds before and after the pick time for waveform retrieval
+window_length = 5  # seconds from event start time to the end of the window for waveform retrieval
