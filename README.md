@@ -1,5 +1,4 @@
 # Impulsive_scan
-Impulsive_scan
 
 1. How to Run the Script?
 Open a terminal, navigate to the impulsive_scan folder, and run: python main.py
