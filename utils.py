@@ -163,7 +163,7 @@ def plot_waveforms_with_picks(p_start_lst, p_pick_lst, stations, window_length=5
             try:
                 event_magnitude_check(p_start, 10)
             except:
-                print("No events found in magnitude catalog check.")
+                print("### No events found in magnitude catalog check. ###")
 
             st.merge(fill_value="interpolate")  # merge gaps if any
             st.detrend("demean")
@@ -178,7 +178,7 @@ def plot_waveforms_with_picks(p_start_lst, p_pick_lst, stations, window_length=5
                     ax.legend(fontsize=8)
 
             folder_save = f"img/{sta}/"
-            file_save = f"{folder_save}{sta}_{p_start.strftime('%Y%m%dT%H%M%S')}.png"
+            file_save = f"{folder_save}{sta}_{p_start.strftime('%Y%m%dT%H%M%S')}_{window_length}s.png"
             if not os.path.exists(folder_save):
                 os.makedirs(folder_save)
             plt.savefig(file_save, dpi=100)
